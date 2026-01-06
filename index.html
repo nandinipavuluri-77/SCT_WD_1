@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillCraft Task 01</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body 
+	{
+            line-height: 1.6;
+        }
+        header
+	 {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: transparent;
+            padding: 15px 40px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        header.scrolled 
+	{
+            background: #111;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        nav 
+	{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo 
+	{
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        ul
+	 {
+            list-style: none;
+            display: flex;
+        }
+
+        ul li
+	 {
+            margin-left: 25px;
+        }
+
+        ul li a 
+	{
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+        }
+
+        ul li a:hover
+	 {
+            background: #00c6ff;
+            color: black;
+            border-radius: 5px;
+        }
+        section 	
+	{
+            min-height: 100vh;
+            padding: 120px 40px;
+        }
+
+        #home 
+	{
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+        }
+
+        #about
+	 {
+            background: #f4f4f4;
+        }
+
+        #services 
+	{
+            background: #e2e2e2;
+        }
+
+        #contact
+	 {
+            background: #d0d0d0;
+        }
+
+        h1
+	 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        p
+	 {
+            max-width: 600px;
+            font-size: 18px;
+        }
+        @media (max-width: 768px) 
+	{
+            nav
+	 {
+                flex-direction: column;
+            }
+
+            ul 
+	{
+                margin-top: 10px;
+            }
+
+            ul li 
+	{
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="navbar">
+        <nav>
+            <div class="logo">SkillCraft</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h1>Responsive Landing Page</h1>
+        <p>
+            This project demonstrates a fixed navigation menu that changes style
+            when scrolled and includes hover effects. Built as Task 01 for
+            SkillCraft Technology Internship.
+        </p>
+    </section>
+    <section id="about">
+        <h1>About</h1>
+        <p>
+            SkillCraft Technology provides internship opportunities focused on
+            practical learning and real-world development tasks.
+        </p>
+    </section>
+    <section id="services">
+        <h1>Services</h1>
+        <p>
+            Web Development, UI/UX Design, Data Science, Machine Learning and more.
+        </p>
+    </section>
+    <section id="contact">
+        <h1>Contact</h1>
+        <p>
+            Email: info@skillcrafttechnology.com <br>
+            Phone: +91 XXXXX XXXXX
+        </p>
+    </section>
+    <script>
+        window.addEventListener("scroll", function ()
+	 {
+            const navbar = document.getElementById("navbar");
+            if (window.scrollY > 50) 
+	{
+                navbar.classList.add("scrolled");
+            }
+	 else 
+	{
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+</body>
+</html>
